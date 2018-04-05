@@ -1,0 +1,439 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+html, body
+	height: 100%
+	color: $main-color
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+	color: $main-color
+	background-color: #fff
+	.main-header
+		height: 100vh
+		background-size: cover
+		background-repeat: no-repeat
+		.main-header-opacity
+			background: rgba(0, 0, 0, 0.4)
+			height: 98vh
+#wrapper
+	overflow: hidden
+
+.h1, .h2, .h3, .h4
+	text-transform: uppercase
+
+.btn-transparent, .btn-white
+	display: inline-block
+	text-decoration: none
+	padding: 5px 20px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	border:  1px solid #fff
+	margin-top: 15px
+	border-radius: 0
+.btn-transparent
+	background-color: transparent
+	color: #fff
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: rgba(0, 0, 0, 0.4)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:hover, &:focus, &:active
+		background-color: rgba(0, 0, 0, 0.4)
+		color: #fff
+		text-decoration: none
+		&::after
+			opacity: .22
+
+.header
+	color: #fff
+
+.navbar-default
+	border: none
+	background: rgba(0, 0, 0, 0)
+	.navbar-nav>li>a, .navbar-brand
+		color: #fff
+	.navbar-nav>li>a:focus, .navbar-nav>li>a:hover
+		color: $accent
+		transition: .25s ease
+		outline: none
+	.navbar-brand
+		padding-left: 90px
+		font-weight: 800
+		font-size: 26px
+	.navbar-right
+		margin-right: 30px
+	.navbar-toggle
+		border-color: $accent
+		background-color: $accent
+		&:focus, &:hover
+			background-color: $accent
+			transition: .25s ease
+		.icon-bar
+			background-color: #fff
+	.navbar-collapse, .navbar-form
+		border: none
+	ul
+		float: right
+
+
+.header-flex
+	display: flex
+	position: relative
+	top: 35%
+
+.flex-center
+	margin: auto
+
+.header-composition
+	text-align: center
+	position: relative
+	.h1
+		font-size: 40px
+		line-height: 1.6
+		margin: 0
+		white-space: nowrap
+		font-weight: 800
+	p
+		text-align: center
+		font-size: 14px
+		align-items: center
+		white-space: nowrap
+
+.services, .about, .works, .contact, .social
+	text-align: center
+	.services-block, .about-block, .works-block, .contact-block, .social-block
+		margin-top: 80px
+		hr
+			width: 60px
+			border-top: 2px solid $main-color
+			margin-top: 35px
+
+.flex-containet-services, .flex-containet-about
+	margin-top: 40px
+	display: flex
+	justify-content: center
+	align-items: stretch
+	flex-flow: row wrap
+	padding: 0
+	.fa
+		font-size: 32px
+		border: 1px solid $accent
+		border-radius: 10em
+		width: 60px
+		height: 60px
+		line-height: 58px
+		margin-bottom: 20px
+	.fa-font-service
+		background-color: $accent
+		color: #fff
+	.fa-code-service, .fa-support-service
+		color: $accent
+		border: 2px solid rgba(0, 0, 0, 0.1)
+	p
+		span
+			text-transform: uppercase
+
+.flex-containet-about
+	p
+		text-align: justify
+
+.works-item
+	display: flex
+	justify-content: center
+	ul
+		display: flex
+		li
+			list-style: none
+			a
+				color: $main-color
+				margin: 10px
+				display: block
+				&:focus, &:active
+					color: $accent
+					text-decoration: none
+				&:visited, &:hover
+					text-decoration: none
+.main-hair
+	height: 330px
+	background-size: cover
+	color: #fff
+	position: relative
+	margin-bottom: 60px
+	.hair-opacity
+		background-color: $accent-light
+		margin: 5px
+		background-size: cover
+		width: 80%
+		height: 95%
+		position: absolute
+.hair-content
+	position: absolute
+	top: 30%
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	p
+		strong
+			letter-spacing: 1px
+			font-size: 18px
+	.btn-white
+		color: $accent-light
+		background-color: #fff
+		text-transform: uppercase
+		&:focus, &:hover
+			border: none
+			background-color: #fff
+			color: $accent-light
+			opacity: 0.85
+	a
+		&::after
+			content: '\f105'
+			font-size: 16px
+			font-family: FontAwesome
+			margin-left: 5px
+
+.bxslider
+	display: inline-flex
+
+
+.call
+	height: auto
+
+.call-bg
+	position: relative
+	width: 100%
+	height: 175vh
+	background-image: url(../img/bg2.jpg)
+	background-size:  cover
+	.call-bg-slider
+		height: 52%
+		padding: 0
+		.slider-one, .slider-two, .slider-three, .slider-four
+			position: absolute
+		.slider-one
+			background: url(../img/slider1.jpg) no-repeat
+			right: 15%
+			top: -5%
+			background-size: contain
+		.slider-two
+			background: url(../img/slider2.jpg) no-repeat
+			top: 22%
+			left: 13%
+			background-size: contain
+		.slider-three
+			background: url(../img/slider3.jpg) no-repeat
+			top: 260px
+			left: 25%
+			background-size: contain
+		.slider-four
+			background: url(../img/slider4.jpg) no-repeat
+			top: 22%
+			right: 12%
+			background-size: contain
+
+.call-get-opacity
+	background-color: $accent-light
+	width: 100%
+	height: 27%
+	position: absolute
+	.call-get-content
+		margin: auto
+		top: 30%
+		bottom: 0
+		left: 0
+		right: 0
+		position: absolute
+		color: #fff
+		font-size: 22px
+		span
+			text-transform: uppercase
+		a
+			margin-top: 26px
+		.btn-get
+			padding: 8px 15px
+			font-size: 14px
+			letter-spacing: 2px
+			font-weight: 400
+
+.schedule-first
+	margin-bottom: 20px
+.schedule-second
+	margin-bottom: 80px
+.schedule-content
+	margin-top: 10px
+	.schedule-data
+		font-size: 18px
+		padding: 20px
+		border: 1px solid black
+		line-height: 1.2
+		text-transform: uppercase
+	.h3, p
+		span
+			color: $accent-light
+	p
+		margin-top: 10px
+	.schedule-auther
+		font-style: italic
+	a
+		color: $accent-light
+		font-weight: 800
+		&:hover, &:focus
+			text-decoration: none
+			color: rgba(207, 63, 63, 0.9)
+			transition: .25s ease
+
+.clients-container
+	padding: 0 100px
+.clients-logo
+	width: 100px
+	height: auto
+	margin-top: 20px
+	margin-bottom: 20px
+.carousel
+	height: 300px
+	.carousel-caption
+		position: unset
+		color: $main-color
+		text-shadow: none
+		p
+			font-style: normal
+	.carousel-indicators
+		.active
+			background-color: $accent-light
+		li
+			border: none
+			background-color: rgba(0, 0, 0, 0.3)
+	p
+		font-style: italic
+
+.contact-block
+	margin-bottom: 80px
+
+.contact-info
+	margin-bottom: 40px
+	.fa
+		margin-right: 10px
+		font-size: 22px
+	.h4
+		font-size: 20px
+		line-height: 1
+	.fa, .h4
+		font-weight: 800
+
+	p
+		margin-left: 20px
+
+.contact-form
+	input, .contact-submit
+		border-radius: 0
+		padding: 22px 12px
+		text-transform: uppercase
+	textarea
+		width: 100%
+		text-transform: uppercase
+		padding: 10px 0 0 10px
+		font-size: 14px
+		line-height: 1.42857143
+		color: #555
+		border: 1px solid #ccc
+		resize: none
+		&:focus
+			border-color: $accent-light
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($accent-light, 0.08)
+			outline: none
+	.contact-submit
+		background-color: #fff
+		color: #555
+		border-width: 1px
+		padding: 12px 25px
+	.form-control
+		&:focus
+			border-color: $accent-light
+			box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba($accent-light, 0.08)
+	.sdv
+		line-height: 2.7
+		span
+			color: $accent-light
+
+.social
+	background-color: $accent
+	color: #fff
+	.social-block
+		margin-bottom: 80px
+		a
+			color: #fff
+		hr
+			border-top: 2px solid #fff
+		.fa-twitter
+			border: 1px solid #fff
+			height: 30px
+			width: 30px
+			line-height: 30px
+			border-radius: 4em
+			margin: 5px
+			&:hover, &:focus
+				border: 1px solid $main-color
+				color: $main-color
+				transition: .25s ease
+
+.bxslider
+	li
+		margin-right: 5px
+		margin-left: 5px
+		.bxslider-member
+			position: absolute
+			bottom: 25px
+			width: inherit
+			text-align: center
+			&:hover, &:focus
+				color: $accent
+				transition: .25s ease
+
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: $main-color
+	z-index: 12
+	border-radius: 4em
+	color: $accent
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .5
+	&:hover
+		color: #ccc
+		background-color: $accent
+		opacity: 1
+	&.active
+		right: 25px
+
+@import "media"
