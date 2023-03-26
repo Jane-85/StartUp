@@ -14,6 +14,28 @@ var gulp           = require('gulp'),
 		notify         = require("gulp-notify"),
 		rsync          = require('gulp-rsync');
 
+const paths = {
+  scripts: {
+    src: './',
+    dest: './build/'
+  }
+};
+
+		async function includeHTML(){
+			return gulp.src([
+			  '*.html',
+			  '!header.html', // ignore
+			  '!footer.html' // ignore
+			  ])
+			  .pipe(fileinclude({
+				prefix: '@@',
+				basepath: '@file'
+			  }))
+			  .pipe(gulp.dest(paths.scripts.dest));
+		  }
+
+		  exports.default = includeHTML;
+
 gulp.task('common-js', function() {
 	return gulp.src([
 		'app/js/common.js',
